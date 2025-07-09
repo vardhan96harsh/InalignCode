@@ -105,10 +105,10 @@ import { Link } from "react-scroll";
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-[100dvh] w-full py-8 ">
+    <section id="home" className="w-full py-8 ">
       <div className="inset-0 bg-opacity-20" />
 
-      <div className="flex flex-col md:flex-row items-center w-full px-14 py-20 md:py-0 2xl:py-20 md:px-10 lg:px-[100px] xl:px-[102px] 2xl:px-[101px]">
+      <div className="flex flex-col md:flex-row items-center w-full px-14 py-20 md:py-0 2xl:py-10 md:px-10 lg:px-[100px] xl:px-[102px] 2xl:px-[101px]">
         {/* Left Content with motion */}
         <motion.div
           className="text-white md:w-1/2 md:space-y-8 space-y-2 z-20 md:mt-16"
@@ -116,7 +116,7 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <h1 className="text-2xl md:text-[32px] lg:text-[34px] xl:text-[45px] 2xl:text-7xl leading-tight font-medium">
+          <h1 className="text-2xl md:text-[32px] lg:text-[34px] xl:text-[45px] 2xl:text-5xl leading-tight font-medium">
             Your Smartest AI Agent <br />
             Sounds <span className="text-[#FE5868] font-bold">
               100% Human
@@ -150,22 +150,22 @@ const Home = () => {
 
         {/* Right Card with motion */}
         <motion.div
-          className=" relative ml-0 xl:ml-20  2xl:ml-28 mt-17 md:w-1/2 z-10 flex  md:justify-center"
+          className=" relative ml-0 xl:ml-20  2xl:ml-52 mt-17 md:w-1/2 z-10 flex  md:justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
         >
           <div className="w-fit">
-            <div className="relative w-fit ml-[-50px] md:ml-0">
+            <div className="relative w-fit ml-[-50px] md:ml-0 ">
               <div className="absolute inset-0 rounded-[30px] bg-gradient-to-br from-purple-800 via-pink-700 to-indigo-600 -z-10 shadow-[0_0_30px_1px_#FE5868]"></div>
               <img
                 src={h1i}
                 alt="3D Model"
-                className="h-80 xl:h-96 2xl:h-[550px] object-contain rounded-[30px] border border-white border-opacity-10 shadow-inner"
+                className="h-80 xl:h-96 2xl:h-[500px] object-contain rounded-[30px] border border-white border-opacity-10 shadow-inner"
               />
             </div>
 
-            <div className="absolute top-2 right-[-50px]  lg:top-5 md:top-3 md:right-3 lg:right-6 xl:top-4  xl:right-4 2xl:top-8 2xl:right-20 bg-white/10 backdrop-blur-md rounded-xl px-4 2xl:px-7 py-3 2xl:py-4 shadow-md flex items-center gap-3">
+            <div className="absolute top-2 right-[-50px]  lg:top-5 md:top-3 md:right-3 lg:right-6 xl:top-4  xl:right-4 2xl:top-8 2xl:right-2 bg-white/10 backdrop-blur-md rounded-xl px-4 2xl:px-7 py-3 2xl:py-4 shadow-md flex items-center gap-3">
               <div className="bg-white text-purple-600 rounded-full w-8 h-8 2xl:w-12 2xl:h-12 flex items-center justify-center">
                 <svg
                   className="w-4 h-4 2xl:w-8 2xl:h-8"
@@ -181,11 +181,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="absolute top-20 md:top-20 2xl:top-[140px] right-[-50px] md:right-6 2xl:right-[90px]">
+            <div className="absolute top-20 md:top-20 2xl:top-[140px] right-[-50px] md:right-6 2xl:right-[10px]">
               <img src={wav} alt="Wave" className="h-8 2xl:h-12" />
             </div>
 
-            <div className="absolute bottom-2 right-[-40px] lg:bottom-3  md:bottom-2 xl:bottom-4 2xl:bottom-5 xl:right-4 2xl:right-20 bg-white/10 backdrop-blur-md rounded-2xl p-2 xl:p-4  text-white w-[200px] lg:w-[190px] xl:w-[280px] 2xl:w-[320px] shadow-md">
+            <div className="absolute bottom-2 right-[-40px] lg:bottom-3  md:bottom-2 xl:bottom-4 2xl:bottom-5 xl:right-4 2xl:right-4 bg-white/10 backdrop-blur-md rounded-2xl p-2 xl:p-4  text-white w-[200px] lg:w-[190px] xl:w-[280px] 2xl:w-[320px] shadow-md">
               <h3 className="lg:text-sm xl:text-xl 2xl:text-2xl font-bold mb-1">
                 20x
               </h3>
@@ -201,7 +201,7 @@ const Home = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-[-100px] 2xl:bottom-[-50px] left-0 w-full z-1">
+      <div className=" ">
         <WaveDivider />
       </div>
     </section>

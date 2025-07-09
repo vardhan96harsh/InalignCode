@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 2xl:py-44 px-6 text-white relative">
       <div className="text-center mb-12">
-        <h2 className="text-4xl 2xl:text-6xl font-bold mb-2">Testimonials</h2>
+        <h2 className="text-4xl 2xl:text-5xl font-bold mb-2">Testimonials</h2>
         <p className="text-white-400 max-w-2xl xl:text-xl 2xl:text-2xl mx-auto">
           Hear from creators, marketers, and innovators using our AI voice tools daily.
         </p>

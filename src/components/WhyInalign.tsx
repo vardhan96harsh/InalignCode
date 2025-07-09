@@ -10,7 +10,7 @@ const WhyInalign = () => {
       className="px-6 sm:px-10 md:px-14 lg:px-20 2xl:px-[100px] py-16 md:py-24 2xl:py-44 text-white text-center"
     >
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-[55px] font-semibold mb-12 md:mb-20 2xl:mb-40">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl 2xl:text-[42px] font-semibold mb-12 md:mb-20 2xl:mb-20">
         Why <span className="text-[#FE5868] font-bold">Inalign</span> Is Smarter Than a Human Agent
       </h2>
 
@@ -19,7 +19,7 @@ const WhyInalign = () => {
         {/* Card 1 */}
         <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[13px] border-white/20 lg:border-r last:border-r-0">
           <img src={w1} alt="" className="w-20 h-20 2xl:w-36 2xl:h-36 mb-4 2xl:mb-6" />
-          <h3 className="text-xl 2xl:text-3xl font-bold mb-2">It Remembers <br /> Everything</h3>
+          <h3 className="text-xl 2xl:text-2xl font-bold mb-2">It Remembers <br /> Everything</h3>
           <p className="text-sm 2xl:text-xl text-white">
             Remembers all past conversations, customer preferences, and history.
           </p>
@@ -28,7 +28,7 @@ const WhyInalign = () => {
         {/* Card 2 */}
         <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[13px] border-white/20 lg:border-r last:border-r-0">
           <img src={w2} alt="" className="w-20 h-20 xl:w-20 xl:h-20 2xl:w-36 2xl:h-36 mb-4 2xl:mb-6" />
-          <h3 className="text-xl 2xl:text-3xl font-bold mb-2">It Responds <br /> Instantly</h3>
+          <h3 className="text-xl 2xl:text-2xl font-bold mb-2">It Responds <br /> Instantly</h3>
           <p className="text-sm 2xl:text-xl text-white">
             Handles 1 or 10,000 calls at once – with zero wait time. No hold music. No call drops.
           </p>
@@ -37,7 +37,7 @@ const WhyInalign = () => {
         {/* Card 3 */}
         <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[13px] border-white/20 lg:border-r last:border-r-0">
           <img src={w3} alt="" className="w-20 h-20 2xl:w-32 2xl:h-32 mb-4 2xl:mb-6" />
-          <h3 className="text-xl 2xl:text-3xl font-bold mb-2">It Gets Smarter <br /> Every Day</h3>
+          <h3 className="text-xl 2xl:text-2xl font-bold mb-2">It Gets Smarter <br /> Every Day</h3>
           <p className="text-sm 2xl:text-xl text-white">
             Learns from each conversation. Improves automatically. Better today than yesterday.
           </p>
@@ -46,7 +46,7 @@ const WhyInalign = () => {
         {/* Card 4 */}
         <div className="flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[13px]">
           <img src={w4} alt="" className="w-20 h-20 2xl:w-32 2xl:h-32 mb-4 2xl:mb-6" />
-          <h3 className="text-xl 2xl:text-3xl font-bold mb-2">It Speaks<br /> Their Language</h3>
+          <h3 className="text-xl 2xl:text-2xl font-bold mb-2">It Speaks<br /> Their Language</h3>
           <p className="text-sm 2xl:text-xl text-white">
            Switches languages on the fly — no lag, no confusion. Be local, even at global scale.
           </p>

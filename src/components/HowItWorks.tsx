@@ -14,10 +14,10 @@ const HowItWorks = () => {
   return (
     <section
       id="how"
-      className="min-h-[100dvh] px-6 md:px-10 lg:px-20 xl 2xl:px-[110px] py-12 md:py-20 2xl:py-44 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white flex items-center justify-center"
+      className=" px-6 md:px-10 lg:px-20 xl 2xl:px-[110px] py-12 md:py-20 2xl:py-44 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white flex items-center justify-center"
     >
       <div className="w-full text-center">
-        <h2 className="text-2xl md:text-4xl xl:text-4xl 2xl:text-6xl font-bold mb-4">
+        <h2 className="text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-bold mb-4">
           How <span className="text-[#FE5868]">Inalign</span> Works
         </h2>
         <p className="text-sm md:text-lg xl:text-xl 2xl:text-2xl text-white max-w-3xl 2xl:max-w-5xl mx-auto mb-20">
@@ -25,7 +25,7 @@ const HowItWorks = () => {
           interactions into your business operations. Here's how:
         </p>
 
-        <div className=" gap-20 md:gap-16 xl:gap-20 2xl:gap-40 flex flex-col md:flex-row mb-20 w-[200px] md:w-[650px] xl:w-[960px] 2xl:w-[1300px] mx-auto">
+        <div className=" gap-20 md:gap-16 xl:gap-20 2xl:gap-28 flex flex-col md:flex-row mb-20 w-[200px] md:w-[650px] xl:w-[960px] 2xl:w-[1200px] mx-auto">
           {/* Step 1 */}
           <div className="bg-white/5 flex backdrop-blur-md p-4 md:p-4 xl:p-5 rounded-xl border border-white/10 relative">
             <img
@@ -52,7 +52,7 @@ const HowItWorks = () => {
           <div className="bg-white/5 flex backdrop-blur-md p-5 rounded-xl border border-white/10 relative">
             <img
               src={two}
-              className="h-24 w-24 md:h-20 md:w-20 xl:h-32 xl:w-32 absolute bottom-[-10px] left-[-60px] xl:bottom-[-15px]  xl:left-[-80px]"
+              className="h-24 w-24 md:h-20 md:w-20 xl:h-32 xl:w-32 absolute bottom-[-10px] left-[-60px] xl:bottom-[-15px]  xl:left-[-80px] 2xl:left-[-90px]"
             ></img>
             <div className="text-left">
               <h3 className="text-lg md:text-lg xl:text-xl 2xl:text-2xl font-bold mb-2">
@@ -75,7 +75,7 @@ const HowItWorks = () => {
           <div className="bg-white/5 flex backdrop-blur-md p-6 rounded-xl border border-white/10 relative">
             <img
               src={three}
-              className="h-24 w-24 md:h-20 md:w-20  xl:h-32 xl:w-32 absolute bottom-[-10px] xl:bottom-[-15px] left-[-60px] xl:left-[-80px]"
+              className="h-24 w-24 md:h-20 md:w-20  xl:h-32 xl:w-32 absolute bottom-[-10px] xl:bottom-[-15px] left-[-60px] xl:left-[-80px] 2xl:left-[-90px]"  
             ></img>
             <div className="text-left">
               <h3 className="text-lg   md:text-lg xl:text-xl 2xl:text-2xl font-bold mb-2">

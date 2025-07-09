@@ -38,7 +38,7 @@ const BookDemo = () => {
   return (
     <section
       id="bookdemo"
-      className="min-h-screen bg-gradient-to-br from-[#1a0b3c] via-[#2b0d59] to-[#5b1d91] px-6 py-10 xl:py-20 2xl: flex items-center justify-center"
+      className=" bg-gradient-to-br from-[#1a0b3c] via-[#2b0d59] to-[#5b1d91] px-6 py-10 xl:py-20 2xl: flex items-center justify-center"
     >
       <div className="w-full max-w-2xl bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl p-10 2xl:p-12 text-white">
         <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold text-center text-white mb-8">

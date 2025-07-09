@@ -15,13 +15,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0  w-full z-50 bg-transparent px-6 md:px-20 py-4 flex items-center gap-[150px] md:gap-[100px] lg:gap-[240px] xl:gap-[498px] 2xl:gap-[750px] text-white backdrop-blur-md max-w-[1900] mx-auto">
+    <nav className="fixed top-0  w-full z-50 bg-transparent px-6 md:px-20 2xl:px-20 py-4 flex items-center gap-[150px] md:gap-[100px] lg:gap-[240px] xl:gap-[498px] 2xl:gap-[570px] text-white backdrop-blur-md max-w-[1900] mx-auto">
       {/* Logo */}
       <div className="flex items-center space-x-4 ml-6">
         <img
           src={logo}
           alt="Logo"
-          className="h-12 sm:h-14 md:h-12 lg:h-10 xl:h-12  2xl:h-20 w-auto"
+          className="h-12 sm:h-14 md:h-12 lg:h-10 xl:h-12  2xl:h-16 w-auto"
         />
         <span className="text-[#FE5868] text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-semibold">Inalign</span>
       </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 mr-2  text-[16px] 2xl:text-[28px] tracking-wide">
+      <ul className="hidden md:flex gap-8 mr-2  text-[16px] 2xl:text-[24px] tracking-wide">
         {menuItems.map((item) => (
           <li key={item.id}>
             <Link
