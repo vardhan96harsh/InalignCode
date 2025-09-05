@@ -2,7 +2,7 @@ import dive from "../assets/divder.png";
 
 const WaveDivider = () => {
   return (
-    <div className=" mt-[-300px] py-0 ">
+    <div className=" mt-[-400px] h-[150px] py-0 ">
       <img
         src={dive}
         alt="Wave Divider"

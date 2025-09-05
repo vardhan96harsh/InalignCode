@@ -14,7 +14,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how"
-      className=" px-6 md:px-10 lg:px-20 xl 2xl:px-[110px] py-12 md:py-20 2xl:py-44 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white flex items-center justify-center"
+      className=" px-6 md:px-10 lg:px-20 xl 2xl:px-[110px] py-12 md:py-20 2xl:py-40 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white flex items-center justify-center"
     >
       <div className="w-full text-center">
         <h2 className="text-2xl md:text-4xl xl:text-4xl 2xl:text-5xl font-bold mb-4">
