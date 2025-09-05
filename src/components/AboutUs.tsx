@@ -27,9 +27,9 @@ const AboutUs = () => {
 
       <section
         id="about"
-        className="relative px-[50px]  lg:px-[112px] xl:px-[112px] 2xl:px-[105px] py-10 md:py-12 2xl:py-16 text-white bg-gradient-to-b from-purple-920 via-[#3B1191] to-[#200870] overflow-hidden z-0"
+        className="relative px-[50px]  lg:px-[112px] xl:px-[112px] 2xl:px-[105px] py-10 md:py-28 text-white bg-gradient-to-b from-purple-920 via-[#3B1191] to-[#200870] overflow-hidden z-0"
       >
-        <div className="  grid md:grid-cols-2 gap-[10px] xl:gap-[50px] 2xl:gap-[100px] ">
+        <div className="  grid md:grid-cols-2 gap-[10px] xl:gap-[50px] 2xl:gap-[100px] mt-10 ">
           {/* Left Text Content */}
           <div>
             <h2 className="text-4xl 2xl:text-5xl font-bold mb-4">About Us</h2>

@@ -12,7 +12,7 @@ const WhatMake = () => {
   return (
     <section
       id="usecase"
-      className="px-6 md:px-[100px] py-20 2xl:py-28 text-white bg-gradient-to-br from-[#5B1D91] via-[#2A0E56] to-[#0D0B3C] text-center"
+      className="px-6 md:px-[100px] py-20 xl:py-24 2xl:py-20 text-white bg-gradient-to-br from-[#5B1D91] via-[#2A0E56] to-[#0D0B3C] text-center"
     >
       {/* Header */}
       <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-bold mb-4">

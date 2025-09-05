@@ -1,9 +1,9 @@
-import WaveDivider from "./WaveDivider";
-
 import h1i from "../assets/hbg.jpg";
-import wav from "../assets/wav.svg";
+// import wav from "../assets/wav.svg";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import demoAudio from "../assets/aicallsam.mp3";
+import { useRef, useState, useEffect } from "react";
 
 // type MessagePart = { text: string; className?: string };
 // type FullMessage = MessagePart[];
@@ -104,11 +104,44 @@ import { Link } from "react-scroll";
 // };
 
 const Home = () => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handleEnded = () => setIsPlaying(false);
+    const handlePause = () => setIsPlaying(false);
+    const handlePlay = () => setIsPlaying(true);
+
+    audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("pause", handlePause);
+    audio.addEventListener("play", handlePlay);
+
+    return () => {
+      audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("pause", handlePause);
+      audio.removeEventListener("play", handlePlay);
+    };
+  }, []);
+
   return (
     <section id="home" className="w-full py-8 ">
       <div className="inset-0 bg-opacity-20" />
 
-      <div className="flex flex-col md:flex-row items-center w-full px-14 py-20 md:py-0 2xl:py-10 md:px-10 lg:px-[100px] xl:px-[102px] 2xl:px-[101px]">
+      <div className="flex flex-col md:flex-row items-center w-full px-14 py-20 md:py-0 lg:py-10 xl:py-10 2xl:py-10 md:px-10 lg:px-[100px] xl:px-[102px] 2xl:px-[101px]">
         {/* Left Content with motion */}
         <motion.div
           className="text-white md:w-1/2 md:space-y-8 space-y-2 z-20 md:mt-16"
@@ -167,22 +200,85 @@ const Home = () => {
 
             <div className="absolute top-2 right-[-50px]  lg:top-5 md:top-3 md:right-3 lg:right-6 xl:top-4  xl:right-4 2xl:top-8 2xl:right-2 bg-white/10 backdrop-blur-md rounded-xl px-4 2xl:px-7 py-3 2xl:py-4 shadow-md flex items-center gap-3">
               <div className="bg-white text-purple-600 rounded-full w-8 h-8 2xl:w-12 2xl:h-12 flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 2xl:w-8 2xl:h-8"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                <audio ref={audioRef} src={demoAudio} />
+
+                <button
+                  onClick={handlePlayPause}
+                  className="bg-white text-purple-600 rounded-full w-8 h-8 2xl:w-12 2xl:h-12 flex items-center justify-center"
                 >
-                  <path d="M6 4l10 6-10 6V4z" />
-                </svg>
+                  {isPlaying ? (
+                    // Pause Icon
+                    <svg
+                      className="w-4 h-4 2xl:w-8 2xl:h-8"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M6 4h2v12H6V4zm6 0h2v12h-2V4z" />
+                    </svg>
+                  ) : (
+                    // Play Icon
+                    <svg
+                      className="w-4 h-4 2xl:w-8 2xl:h-8"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M6 4l10 6-10 6V4z" />
+                    </svg>
+                  )}
+                </button>
               </div>
               <div className="text-white text-xs 2xl:text-xl">
                 <p className="mb-1">Listen Demo!</p>
-                <p className="text-sm font-semiboldv 2xl:text-2xl">3:16 min</p>
+                <p className="text-sm font-semiboldv 2xl:text-2xl">2:38 min</p>
               </div>
             </div>
 
-            <div className="absolute top-20 md:top-20 2xl:top-[140px] right-[-50px] md:right-6 2xl:right-[10px]">
-              <img src={wav} alt="Wave" className="h-8 2xl:h-12" />
+            <div className="absolute top-20 md:top-[82px] 2xl:top-[140px] right-[-50px] md:right-2 2xl:right-[10px] w-[200px]">
+              <svg
+                viewBox="0 0 160 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-8 2xl:h-12"
+              >
+                {[...Array(40)].map((_, i) => {
+                  const height = Math.floor(Math.random() * 30) + 20; // bar height: 20–50
+                  const y = 40 - height / 2; // center from vertical
+                  return (
+                    <rect
+                      key={i}
+                      x={i * 10} // 4px spacing
+                      y={y}
+                      width="2"
+                      height={height}
+                      rx="1"
+                      fill="white"
+                      style={
+                        isPlaying
+                          ? {
+                              animation: `waveBounceCenter 1s ease-in-out ${
+                                i * 0.05
+                              }s infinite`,
+                              transformOrigin: "center",
+                            }
+                          : {}
+                      }
+                    />
+                  );
+                })}
+              </svg>
+
+              <style>
+                {`
+      @keyframes waveBounceCenter {
+        0%, 100% {
+          transform: scaleY(1);
+        }
+        50% {
+          transform: scaleY(1.5);
+        }
+      }
+    `}
+              </style>
             </div>
 
             <div className="absolute bottom-2 right-[-40px] lg:bottom-3  md:bottom-2 xl:bottom-4 2xl:bottom-5 xl:right-4 2xl:right-4 bg-white/10 backdrop-blur-md rounded-2xl p-2 xl:p-4  text-white w-[200px] lg:w-[190px] xl:w-[280px] 2xl:w-[320px] shadow-md">
@@ -199,10 +295,6 @@ const Home = () => {
             </div>
           </div>
         </motion.div>
-      </div>
-
-      <div className=" ">
-        <WaveDivider />
       </div>
     </section>
   );

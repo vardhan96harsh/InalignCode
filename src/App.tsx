@@ -14,14 +14,18 @@ import WhyInAlign from "./components/WhyInalign";
 import Divider from "./components/WaveDivider2";
 import WhyChooseUs from "./components/WhyChooseUs";
 import WhatMake from "./components/WhatMake";
+import WaveDivider from "./components/WaveDivider";
 
 function App() {
   return (
     <div className="bg-gradient-to-br from-purple-800 via-purple-900 to-indigo-900 min-h-screen text-white scroll-smooth max-w-[1900px] mx-auto">
       <Navbar />
       <Home />
-
-      <AboutUs />
+        <div className=" ">
+        <WaveDivider />
+      </div>
+<div className="mt-60"> <AboutUs /></div>
+     
       <div className="relative bg-gradient-to-br from-[#080870] via-[#2A0E56] to-[#712bd3] overflow-visible">
         {/* Section 1 */}
         <div className="relative z-20">
